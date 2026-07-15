@@ -20,24 +20,23 @@ jobs:
           --health-cmd="mysqladmin ping"
           --health-interval=10s
           --health-timeout=5s
-          --health-retries-3
+          --health-retries=3
         ports:
-         - 3307:3306
+          - 3307:3306
 
     steps:
-     - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-     - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: "3.8"
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
 
-     - name: Run Django checks
-       run: |
-         python3 manage.py check
+      - name: Run Django checks
+        run: |
+          python3 manage.py check
 
-     - name: Run Django Tests
-       run: |
-         python3 manage.py test
-
+      - name: Run Django Tests
+        run: |
+          python3 manage.py test
