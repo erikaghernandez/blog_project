@@ -77,9 +77,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog_db',
-        'USER': 'blogusererika',
-        'PASSWORD': 'erika1234',
-        'HOST': '127.0.0.1',
+        'USER': 'coursera',
+        'PASSWORD': 'coursera',
+        'HOST': 'coursera-mysql-instance.cibie26iy13m.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
